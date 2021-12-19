@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title><%= title %> </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class='container'>
+  <header>
+    <h1><%= title %></h1>
+  </header>
+  <div role='main'>
+    <table class='table'>
+      <% for(const item of content) {%>
+      <tr>
+        <% let obj = item %>
+        <th><%= obj.id %></th>
+        <td><%= obj.name %></td>
+        <td><%= obj.mail %></td>
+        <td><%= obj.age %></td>
+      </tr>
+      <% } %>
+    </table>
+    <a href="/hello/find">検索ページへ</a>
+    <a href="/hello/show">詳細ページへ</a>
+    <a href="/hello/add">追加ページへ</a>
+    <a href="/hello/edit">編集ページへ</a>
+    <a href="/hello/delete">削除ページへ</a>
+  </div>
+</body>
+
+</html>
